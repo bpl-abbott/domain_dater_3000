@@ -106,6 +106,7 @@ def main(args):
 	#parse command line arguments, would normally use argparse or getopt
 	if len(args) >= 1 and (args[0] == '-help' or args[0] == '-h'): #help
 		print('You are on your own! Good luck.')
+		return False
 	elif len(args) > 1 and args[0] == '-i' and args[1].split('.')[1] == 'txt': #file input
 		domain_list = open(args[1],'r').read().split('\n')
 	elif len(args) >= 1 and args[0] != '-i': #domain args
